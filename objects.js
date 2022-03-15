@@ -66,18 +66,5 @@ console.log(identity, naam, jagah, now);
 // const { name, years: age, isAdmin = false } = user;
 // console.log(name, age, isAdmin);
 
-function topSalary(salaries) {
-	console.log(Object.keys(salaries));
-	return Object.keys(salaries).reduce((initial, current) => {
-		console.log("initial", salaries[initial], initial);
-		console.log("current", salaries[current], current);
-		return salaries[initial] > salaries[current] ? initial : current;
-	});
-}
-
-let salaries = {
-	John: 100,
-	Pete: 300,
-	Mary: 250,
-};
-topSalary(salaries);
+let num = 45678986543325567888999876n;
+console.log(num + 5n);
