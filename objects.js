@@ -66,21 +66,18 @@ console.log(identity, naam, jagah, now);
 // const { name, years: age, isAdmin = false } = user;
 // console.log(name, age, isAdmin);
 
-// let salaries = {
-// 	John: 100,
-// 	Pete: 300,
-// 	Mary: 250,
-// };
+function topSalary(salaries) {
+	console.log(Object.keys(salaries));
+	return Object.keys(salaries).reduce((initial, current) => {
+		console.log("initial", salaries[initial], initial);
+		console.log("current", salaries[current], current);
+		return salaries[initial] > salaries[current] ? initial : current;
+	});
+}
 
-// const topSalary = (value, label) => {
-// 	return value * 2;
-// };
-
-// console.log(salaries.map(topSalary));
-
-myObject = { a: 1, b: 2, c: 3 };
-newObject = myObject.map(function (value, label) {
-	return value * value;
-});
-
-console.log(newObject);
+let salaries = {
+	John: 100,
+	Pete: 300,
+	Mary: 250,
+};
+topSalary(salaries);
